@@ -1,0 +1,77 @@
+﻿@model List<Rezervasyonlar>
+<div class="card mb-5 mb-xl-8">
+	<!--begin::Header-->
+	<div class="card-header border-0 pt-5">
+		<h3 class="card-title align-items-start flex-column">
+			<span class="card-label fw-bolder fs-3 mb-1">Musteriler</span>
+		</h3>
+		<div class="card-toolbar">
+			<!--begin::Menu-->
+			<a href="/Randevu/Index" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
+				<!--begin::Svg Icon | path: icons/stockholm/Layout/Layout-4-blocks-2.svg-->
+				<span class="svg-icon svg-icon-2">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<rect x="5" y="5" width="5" height="5" rx="1" fill="#000000"></rect>
+							<rect x="14" y="5" width="5" height="5" rx="1" fill="#000000" opacity="0.3"></rect>
+							<rect x="5" y="14" width="5" height="5" rx="1" fill="#000000" opacity="0.3"></rect>
+							<rect x="14" y="14" width="5" height="5" rx="1" fill="#000000" opacity="0.3"></rect>
+						</g>
+					</svg>
+				</span>
+				<!--end::Svg Icon-->
+			</a>
+
+			<!--begin::Menu 2-->
+			<!--end::Menu 2-->
+			<!--end::Menu-->
+		</div>
+	</div>
+	<!--end::Header-->
+	<!--begin::Body-->
+	<div class="card-body py-3">
+		<!--begin::Table container-->
+		<div class="table-responsive">
+			<!--begin::Table-->
+			<table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
+				<!--begin::Table head-->
+				<thead>
+					<tr class="fw-bolder text-muted">
+						<th class="min-w-150px">Musteri Ismi</th>
+						<th class="min-w-140px">Restorant Ismi</th>
+						<th class="min-w-120px">Tarih</th>
+						<th class="min-w-120px">Saat</th>
+						<th class="min-w-100px">Sayi</th>
+					</tr>
+				</thead>
+				<!--end::Table head-->
+				<!--begin::Table body-->
+				<tbody>
+					@foreach(var info in Model){
+					<tr id="@info.MusteriID">
+							<td>
+								<a href="#" class="text-dark fw-bolder text-hover-primary fs-6">@info.MusteriAdi @info.MusteriSoyadi</a>
+							</td>
+						<td>
+							<a href="#" class="text-dark fw-bolder text-hover-primary fs-6">@info.RestoranAdi</a>
+						</td>
+						<td>
+								<a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">@info.Tarih</a>
+						</td>
+						<td>
+								<a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">@info.Saat</a>
+						</td>
+												<td>
+								<a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">@info.KisiSayisi</a>
+						</td>
+					</tr>
+					}
+				</tbody>
+				<!--end::Table body-->
+			</table>
+			<!--end::Table-->
+		</div>
+		<!--end::Table container-->
+	</div>
+	<!--begin::Body-->
+</div>

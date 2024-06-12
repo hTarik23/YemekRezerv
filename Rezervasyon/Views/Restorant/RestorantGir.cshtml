@@ -1,0 +1,20 @@
+﻿@model RestorantAddModel
+
+<form asp-controller="Restorant" asp-action="RestorantGir" method="post">
+    <div class="form-group">
+        <label asp-for="Ad">Ad Giriniz</label>
+        <input asp-for="Ad" class="form-control" placeholder="Adınızı girin">
+        <span asp-validation-for="Ad" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Adress">Soyad</label>
+        <input asp-for="Adress" class="form-control" placeholder="Soyadınızı girin">
+        <span asp-validation-for="Adress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TelefonNumarası">TelefonNumarası</label>
+        <input asp-for="TelefonNumarası" class="form-control" placeholder="Telefon numaranızı girin">
+        <span asp-validation-for="TelefonNumarası" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Gönder</button>
+</form>
